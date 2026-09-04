@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,24 @@
 
 <body>
 
-<div class="page">
+<div class="poster">
 
-    <section class="hero">
+    <!-- TOP WOODEN SIGN -->
+    <div class="title-overlay">
 
-        <div class="wood-sign">
-            <p>ARRIE'S 21ST</p>
-            <h1>Oktoberfest</h1>
-            <span>GOOD BEER • GOOD FRIENDS • GOOD TIMES</span>
-        </div>
+        <p>ARRIE'S 21ST</p>
 
-    </section>
+        <h1>Oktoberfest</h1>
+
+        <span>
+            GOOD BEER • GOOD FRIENDS • GOOD TIMES
+        </span>
+
+    </div>
 
 
-    <section class="invitation-card">
+    <!-- INVITATION -->
+    <div class="invite-overlay">
 
         <h2>Jy is genooi!</h2>
 
@@ -33,10 +38,16 @@
         </p>
 
         <p class="joke">
-            Ja, ek weet... ek het al die <strong>3de Januarie</strong> 21 geword.
-            Dit het my net 9 maande gevat om die partydjie te reel.
+            Ja, ek weet... ek het al die
+            <strong>3de Januarie</strong>
+            21 geword.
+            Dit het my net 9 maande gevat
+            om die partytjie te reël.
             <br>
-            <strong>Better late than sober. 🍻</strong>
+
+            <strong>
+                Better late than sober. 🍻
+            </strong>
         </p>
 
 
@@ -45,20 +56,26 @@
             <div>
                 <span class="icon">📅</span>
                 <strong>DATUM</strong>
-                <p>8 October 2026</p>
+                <p>8 Oktober 2026</p>
             </div>
+
 
             <div>
                 <span class="icon">📍</span>
                 <strong>VENUE</strong>
-                <p>Snowflake<br>Potchefstroom</p>
+                <p>
+                    Snowflake<br>
+                    Potchefstroom
+                </p>
             </div>
+
 
             <div>
                 <span class="icon">🕕</span>
                 <strong>TYD</strong>
                 <p>18:00</p>
             </div>
+
 
             <div>
                 <span class="icon">🍺</span>
@@ -68,10 +85,11 @@
 
         </div>
 
-    </section>
+    </div>
 
 
-    <section class="countdown-card">
+    <!-- COUNTDOWN -->
+    <div class="countdown-overlay">
 
         <h3>COUNTDOWN TO OKTOBERFEST</h3>
 
@@ -99,58 +117,63 @@
 
         </div>
 
-    </section>
+    </div>
 
 
-    <section class="rsvp-card">
+    <!-- RSVP -->
+    <div class="rsvp-overlay">
 
         <h2>RSVP</h2>
 
-        <p>Laat weet my of jy gaan bywoon!</p>
+        <p>
+            Laat weet my of jy gaan bywoon!
+        </p>
+
 
         <form id="rsvpForm">
 
-            <label for="name">Naam</label>
+            <label for="name">
+                Naam
+            </label>
 
             <input
                 type="text"
                 id="name"
-                placeholder="Enter your name"
+                placeholder="Jou naam"
                 required
             >
 
 
-            <label>Gaan jy bywoon?</label>
-
-            <div class="attendance-options">
-
-                <label class="attendance-option">
-                    <input
-                        type="radio"
-                        name="attending"
-                        value="yes"
-                        required
-                    >
-
-                    <span>
-                        🍻 Yes, eks daar!
-                    </span>
-                </label>
+            <p class="question">
+                Gaan jy bywoon?
+            </p>
 
 
-                <label class="attendance-option">
-                    <input
-                        type="radio"
-                        name="attending"
-                        value="no"
-                    >
+            <label class="choice">
 
-                    <span>
-                        Jammer, ek kan dit nie maak nie.
-                    </span>
-                </label>
+                <input
+                    type="radio"
+                    name="attending"
+                    value="yes"
+                    required
+                >
 
-            </div>
+                🍻 Yes, ek's daar!
+
+            </label>
+
+
+            <label class="choice">
+
+                <input
+                    type="radio"
+                    name="attending"
+                    value="no"
+                >
+
+                Jammer, ek kan dit nie maak nie.
+
+            </label>
 
 
             <button type="submit">
@@ -159,12 +182,7 @@
 
         </form>
 
-    </section>
-
-
-    <footer>
-        🌼 GOOD FRIENDS • GOOD BEER • GOOD TIMES 🌼
-    </footer>
+    </div>
 
 </div>
 
@@ -173,4 +191,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>

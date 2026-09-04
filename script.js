@@ -1,3 +1,9 @@
+const SUPABASE_URL = "Yhttps://ddcukgxdrifhzwdwflxf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_L1ERxcgrvYnmrft45_S5Pw_PmNtDfcn";
+
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+
 // Arrie's 21st
 const partyDate = new Date("2026-10-08T18:00:00");
 

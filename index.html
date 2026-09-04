@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arrie se 21st | Oktoberfest 🍻</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="invitation">
+
+        <!-- Hero -->
+        <section class="hero">
+            <p class="prost">🍺 PROST! 🍺</p>
+
+            <h1>ARRIE'S 21ST</h1>
+            <h2>OKTOBERFEST</h2>
+
+            <div class="joke">
+                <p>Ja, ek weet... ek het al 21 geword die <strong>3de Januarie.</strong></p>
+                <p>Dit het my net 9 maande gevat om die partydjie te beplan.</p>
+                <p><strong>Better late than sober. 🍻</strong></p>
+            </div>
+        </section>
+
+
+        <!-- Party Details -->
+        <section class="details">
+
+            <h2>THE FESTIVITIES</h2>
+
+            <div class="details-grid">
+
+                <div class="detail">
+                    <span>📅</span>
+                    <h3>DATUM</h3>
+                    <p>8 October 2026</p>
+                </div>
+
+                <div class="detail">
+                    <span>🕕</span>
+                    <h3>TYD</h3>
+                    <p>18:00</p>
+                </div>
+
+                <div class="detail">
+                    <span>📍</span>
+                    <h3>VENUE</h3>
+                    <p>Snowflake<br>Potchefstroom</p>
+                </div>
+
+                <div class="detail">
+                    <span>🍺</span>
+                    <h3>THEMA</h3>
+                    <p>Oktoberfest</p>
+                </div>
+
+                <div class="detail">
+                    <span>👔</span>
+                    <h3>DRESS CODE</h3>
+                    <p>Oktoberfest</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Countdown -->
+        <section class="countdown-section">
+
+            <h2>COUNTDOWN TO PROST 🍻</h2>
+
+            <div id="countdown">
+
+                <div>
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+
+                <div>
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+
+                <div>
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+
+                <div>
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RSVP -->
+        <section class="rsvp">
+
+            <h2>BIST DU DABEI?</h2>
+
+            <p>Kom vier my laat verjaarsdag saam my!</p>
+
+            <form id="rsvpForm">
+
+                <label for="name">Naam</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Gaan jy kom?</label>
+
+                <div class="radio-options">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="attending"
+                            value="yes"
+                            required
+                        >
+                        🍻 Eks daar!
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="attending"
+                            value="no"
+                        >
+                        😢 Ongelukkig nie
+                    </label>
+
+                </div>
+
+
+                <label for="guestCount">Number Attending</label>
+
+                <select id="guestCount" name="guestCount">
+                    <option value="1">1 person</option>
+                    <option value="2">2 people</option>
+                </select>
+
+
+                <label for="message">
+                    Message / Dietary Requirements
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Anything I should know?"
+                ></textarea>
+
+
+                <button type="submit">
+                    RSVP 🍻
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

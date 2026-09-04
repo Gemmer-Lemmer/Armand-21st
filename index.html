@@ -1,184 +1,386 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* ------------------------------
+   GLOBAL
+------------------------------ */
 
-    <title>Arrie se 21st | Oktoberfest 🍻</title>
+* {
+    box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #17324d;
+    background:
+        linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)),
+        repeating-linear-gradient(
+            45deg,
+            #ffffff 0,
+            #ffffff 30px,
+            #2d6ea3 30px,
+            #2d6ea3 60px
+        );
+    background-attachment: fixed;
+}
 
-<body>
-
-    <main class="invitation">
-
-        <!-- Hero -->
-        <section class="hero">
-            <p class="prost">🍺 PROST! 🍺</p>
-
-            <h1>ARRIE'S 21ST</h1>
-            <h2>OKTOBERFEST</h2>
-
-            <div class="joke">
-                <p>Ja, ek weet... ek het al 21 geword die <strong>3de Januarie.</strong></p>
-                <p>Dit het my net 9 maande gevat om die partydjie te beplan.</p>
-                <p><strong>Better late than sober. 🍻</strong></p>
-            </div>
-        </section>
-
-
-        <!-- Party Details -->
-        <section class="details">
-
-            <h2>THE FESTIVITIES</h2>
-
-            <div class="details-grid">
-
-                <div class="detail">
-                    <span>📅</span>
-                    <h3>DATUM</h3>
-                    <p>8 October 2026</p>
-                </div>
-
-                <div class="detail">
-                    <span>🕕</span>
-                    <h3>TYD</h3>
-                    <p>18:00</p>
-                </div>
-
-                <div class="detail">
-                    <span>📍</span>
-                    <h3>VENUE</h3>
-                    <p>Snowflake<br>Potchefstroom</p>
-                </div>
-
-                <div class="detail">
-                    <span>🍺</span>
-                    <h3>THEMA</h3>
-                    <p>Oktoberfest</p>
-                </div>
-
-                <div class="detail">
-                    <span>👔</span>
-                    <h3>DRESS CODE</h3>
-                    <p>Oktoberfest</p>
-                </div>
-
-            </div>
-
-        </section>
+.invitation {
+    width: min(950px, 94%);
+    margin: 40px auto;
+}
 
 
-        <!-- Countdown -->
-        <section class="countdown-section">
+/* ------------------------------
+   HERO
+------------------------------ */
 
-            <h2>COUNTDOWN TO PROST 🍻</h2>
+.hero {
+    text-align: center;
+    padding: 70px 30px;
+    border-radius: 18px;
 
-            <div id="countdown">
+    background:
+        linear-gradient(rgba(49, 31, 18, 0.7), rgba(49, 31, 18, 0.7)),
+        url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=80");
 
-                <div>
-                    <span id="days">00</span>
-                    <p>Days</p>
-                </div>
+    background-size: cover;
+    background-position: center;
 
-                <div>
-                    <span id="hours">00</span>
-                    <p>Hours</p>
-                </div>
+    color: #fff7dc;
 
-                <div>
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
+    border: 6px solid #5b3419;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
 
-                <div>
-                    <span id="seconds">00</span>
-                    <p>Seconds</p>
-                </div>
+.prost {
+    display: inline-block;
+    margin: 0 0 10px;
 
-            </div>
+    padding: 8px 18px;
 
-        </section>
+    background: #5b3419;
+    color: #fff7dc;
 
+    border-radius: 8px;
 
-        <!-- RSVP -->
-        <section class="rsvp">
+    font-weight: bold;
+    letter-spacing: 4px;
+}
 
-            <h2>BIST DU DABEI?</h2>
+.hero h1 {
+    margin: 10px 0 0;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1;
 
-            <p>Kom vier my laat verjaarsdag saam my!</p>
+    color: #f5e8c8;
 
-            <form id="rsvpForm">
+    text-shadow:
+        3px 3px 0 #194f7a,
+        6px 6px 0 rgba(0,0,0,0.25);
+}
 
-                <label for="name">Naam</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+.hero h2 {
+    margin: 10px 0 20px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
 
+    color: #ffffff;
 
-                <label>Gaan jy kom?</label>
+    letter-spacing: 4px;
+}
 
-                <div class="radio-options">
+.joke {
+    max-width: 650px;
+    margin: 30px auto 0;
 
-                    <label>
-                        <input
-                            type="radio"
-                            name="attending"
-                            value="yes"
-                            required
-                        >
-                        🍻 Eks daar!
-                    </label>
+    padding: 18px 22px;
 
-                    <label>
-                        <input
-                            type="radio"
-                            name="attending"
-                            value="no"
-                        >
-                        😢 Ongelukkig nie
-                    </label>
+    background: rgba(255,248,227,0.92);
+    color: #4e3019;
 
-                </div>
+    border-radius: 12px;
 
+    font-size: 1.1rem;
+    line-height: 1.6;
 
-                <label for="guestCount">Number Attending</label>
-
-                <select id="guestCount" name="guestCount">
-                    <option value="1">1 person</option>
-                    <option value="2">2 people</option>
-                </select>
+    border: 2px solid #c99a4c;
+}
 
 
-                <label for="message">
-                    Message / Dietary Requirements
-                </label>
+/* ------------------------------
+   MAIN PANELS
+------------------------------ */
 
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    placeholder="Anything I should know?"
-                ></textarea>
+.details,
+.countdown-section,
+.rsvp {
+    margin-top: 28px;
+    padding: 38px 28px;
+
+    background: #f8edd6;
+
+    border: 6px solid #6a3e1f;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+
+    text-align: center;
+}
+
+.details h2,
+.countdown-section h2,
+.rsvp h2 {
+    margin-top: 0;
+
+    color: #194f7a;
+
+    font-size: 2rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
 
 
-                <button type="submit">
-                    RSVP 🍻
-                </button>
+/* ------------------------------
+   PARTY DETAILS
+------------------------------ */
 
-            </form>
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
 
-        </section>
+    margin-top: 30px;
+}
 
-    </main>
+.detail {
+    background: rgba(255,255,255,0.55);
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
+    border: 2px solid #d5b16b;
 
-</body>
-</html>
+    border-radius: 12px;
+
+    padding: 18px 12px;
+}
+
+.detail span {
+    font-size: 2rem;
+}
+
+.detail h3 {
+    margin: 10px 0 5px;
+
+    font-size: 0.85rem;
+
+    color: #6a3e1f;
+
+    letter-spacing: 1px;
+}
+
+.detail p {
+    margin: 0;
+
+    font-weight: bold;
+
+    color: #17324d;
+}
+
+
+/* ------------------------------
+   COUNTDOWN
+------------------------------ */
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+#countdown div {
+    min-width: 120px;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(#70421f, #4b2a15);
+
+    color: white;
+
+    border-radius: 10px;
+
+    border: 3px solid #2f180b;
+
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+}
+
+#countdown span {
+    display: block;
+
+    font-size: 2.3rem;
+
+    font-weight: bold;
+
+    color: #f7e5bd;
+}
+
+#countdown p {
+    margin: 5px 0 0;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* ------------------------------
+   RSVP
+------------------------------ */
+
+.rsvp p {
+    font-size: 1.1rem;
+}
+
+form {
+    max-width: 520px;
+
+    margin: 30px auto 0;
+
+    text-align: left;
+}
+
+label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #4f321b;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 2px solid #bb9a63;
+
+    background: #fffaf0;
+
+    font-size: 1rem;
+}
+
+.radio-options {
+    margin-top: 10px;
+}
+
+.radio-options label {
+    display: block;
+
+    padding: 10px 12px;
+
+    border: 2px solid #d1b176;
+
+    border-radius: 9px;
+
+    background: #fff8e7;
+}
+
+.radio-options input {
+    width: auto;
+    margin-right: 8px;
+}
+
+
+/* ------------------------------
+   RSVP BUTTON
+------------------------------ */
+
+button {
+    width: 100%;
+
+    margin-top: 28px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        180deg,
+        #1f6598,
+        #164c73
+    );
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #0c334e;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #0c334e;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 750px) {
+
+    .invitation {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #countdown div {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+}

@@ -21,7 +21,7 @@ body {
             rgba(15, 25, 30, 0.1),
             rgba(15, 25, 30, 0.1)
         ),
-        url("assets/oktoberfest-bg.png");
+        url("oktoberfest-bg.png");
 
     background-size: cover;
     background-position: top center;

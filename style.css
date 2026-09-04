@@ -378,12 +378,6 @@ button:hover {
         align-items: flex-start;
     }
 
-
-    /* =========================
-       POSTER
-       Keep exact 2:3 proportions
-    ========================= */
-
     .poster {
         position: relative;
 
@@ -404,20 +398,20 @@ button:hover {
     }
 
 
-    /* =========================
+    /* =====================
        TOP WOODEN SIGN
-    ========================= */
+    ===================== */
 
     .title-overlay {
-        top: 4.5%;
-        left: 22%;
-        width: 56%;
+        top: 5.4%;
+        left: 20%;
+        width: 60%;
     }
 
     .title-overlay p {
         margin: 0;
 
-        font-size: 3.1vw;
+        font-size: 2.8vw;
         line-height: 1;
 
         font-weight: bold;
@@ -426,38 +420,38 @@ button:hover {
     .title-overlay h1 {
         margin: 1vw 0 0;
 
-        font-size: 9vw;
+        font-size: 8.4vw;
         line-height: 0.95;
     }
 
     .title-overlay span {
         display: block;
 
-        margin-top: 1.2vw;
+        margin-top: 1.3vw;
 
-        font-size: 1.5vw;
+        font-size: 1.35vw;
         line-height: 1;
 
-        letter-spacing: 0.3vw;
+        letter-spacing: 0.25vw;
 
         white-space: nowrap;
     }
 
 
-    /* =========================
-       INVITATION PARCHMENT
-    ========================= */
+    /* =====================
+       INVITATION
+    ===================== */
 
     .invite-overlay {
-        top: 26.3%;
+        top: 27.7%;
         left: 18%;
         width: 64%;
     }
 
     .invite-overlay h2 {
-        margin: 0 0 1.2vw;
+        margin: 0 0 1.3vw;
 
-        font-size: 6vw;
+        font-size: 5.5vw;
         line-height: 1;
 
         color: #075494;
@@ -468,40 +462,39 @@ button:hover {
 
         margin: 0;
 
-        font-size: 2.1vw;
+        font-size: 1.9vw;
         line-height: 1.15;
     }
 
     .invite-overlay .joke {
         width: 100%;
 
-        margin: 1.2vw 0 0;
+        margin: 1vw 0 0;
 
-        font-size: 1.8vw;
-        line-height: 1.25;
+        font-size: 1.65vw;
+        line-height: 1.2;
     }
 
 
-    /* =========================
-       PARTY DETAILS
-    ========================= */
+    /* =====================
+       DETAILS
+    ===================== */
 
     .details {
         display: grid;
-
         grid-template-columns: repeat(4, 1fr);
 
         gap: 0;
 
         width: 100%;
 
-        margin-top: 4vw;
+        margin-top: 4.8vw;
     }
 
     .details div {
         min-width: 0;
 
-        padding: 0 0.5vw;
+        padding: 0 0.4vw;
 
         text-align: center;
     }
@@ -509,38 +502,35 @@ button:hover {
     .details .icon {
         display: block;
 
-        margin: 0 0 0.8vw;
+        margin: 0 0 0.7vw;
 
-        font-size: 2.8vw;
+        font-size: 2.5vw;
         line-height: 1;
     }
 
     .details strong {
         display: block;
 
-        font-size: 1.8vw;
+        font-size: 1.65vw;
         line-height: 1;
 
         white-space: nowrap;
     }
 
     .details p {
-        margin: 1vw 0 0;
+        margin: 0.8vw 0 0;
 
-        font-size: 1.9vw;
+        font-size: 1.65vw;
         line-height: 1.15;
-
-        overflow-wrap: normal;
-        word-break: normal;
     }
 
 
-    /* =========================
-       COUNTDOWN WOOD
-    ========================= */
+    /* =====================
+       COUNTDOWN
+    ===================== */
 
     .countdown-overlay {
-        top: 59.5%;
+        top: 59.6%;
         left: 18%;
         width: 64%;
 
@@ -550,10 +540,10 @@ button:hover {
     .countdown-overlay h3 {
         margin: 0 0 1vw;
 
-        font-size: 2.3vw;
+        font-size: 2vw;
         line-height: 1;
 
-        letter-spacing: 0.2vw;
+        letter-spacing: 0.15vw;
 
         color: #f3e0bb;
 
@@ -562,7 +552,6 @@ button:hover {
 
     #countdown {
         display: grid;
-
         grid-template-columns: repeat(4, 1fr);
 
         gap: 1vw;
@@ -575,7 +564,7 @@ button:hover {
     #countdown span {
         display: block;
 
-        font-size: 4.3vw;
+        font-size: 3.8vw;
         line-height: 1;
 
         font-weight: bold;
@@ -588,19 +577,19 @@ button:hover {
 
         margin-top: 0.5vw;
 
-        font-size: 1.25vw;
+        font-size: 1vw;
         line-height: 1;
 
         color: #f1dab0;
     }
 
 
-    /* =========================
-       RSVP PARCHMENT
-    ========================= */
+    /* =====================
+       RSVP
+    ===================== */
 
     .rsvp-overlay {
-        top: 68%;
+        top: 68.5%;
         left: 18%;
         width: 64%;
 
@@ -610,16 +599,16 @@ button:hover {
     .rsvp-overlay h2 {
         margin: 0;
 
-        font-size: 6vw;
+        font-size: 5.4vw;
         line-height: 1;
 
         color: #075494;
     }
 
     .rsvp-overlay > p {
-        margin: 1vw 0 2vw;
+        margin: 1vw 0 1.8vw;
 
-        font-size: 2.1vw;
+        font-size: 1.8vw;
         line-height: 1.1;
     }
 
@@ -630,11 +619,11 @@ button:hover {
     form > label:first-of-type {
         display: block;
 
-        margin: 0 0 0.7vw;
+        margin: 0 0 0.6vw;
 
         text-align: left;
 
-        font-size: 1.9vw;
+        font-size: 1.6vw;
         line-height: 1;
 
         font-weight: bold;
@@ -644,43 +633,42 @@ button:hover {
         display: block;
 
         width: 100%;
-        height: 6vw;
+        height: 5.6vw;
 
-        padding: 1vw 1.5vw;
+        padding: 1vw 1.4vw;
 
         border: 1px solid #a88b62;
         border-radius: 1vw;
 
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
 
 
-    /* Question */
+    /* QUESTION */
 
     .question {
-        margin: 1.8vw 0 0.8vw;
+        margin: 1.5vw 0 0.7vw;
 
         text-align: left;
 
-        font-size: 1.9vw;
+        font-size: 1.65vw;
         line-height: 1;
 
         font-weight: bold;
     }
 
 
-    /* Radio choices */
+    /* RADIO OPTIONS */
 
     .choice {
         display: flex;
-
         align-items: center;
 
         width: 100%;
 
-        margin: 0.8vw 0;
+        margin: 0.6vw 0;
 
-        padding: 1.3vw 1.5vw;
+        padding: 1.1vw 1.4vw;
 
         text-align: left;
 
@@ -689,36 +677,37 @@ button:hover {
         border: 1px solid #b69b70;
         border-radius: 1vw;
 
-        font-size: 1.85vw;
+        font-size: 1.65vw;
         line-height: 1.1;
     }
 
     .choice input {
         flex-shrink: 0;
 
-        width: 3vw;
-        height: 3vw;
+        width: 2.7vw;
+        height: 2.7vw;
 
-        margin: 0 1.2vw 0 0;
+        margin: 0 1vw 0 0;
     }
 
 
-    /* =========================
+    /* =====================
        RSVP BUTTON
-    ========================= */
+    ===================== */
 
     button {
-        width: 70%;
+        width: 66%;
 
-        margin-top: 1.8vw;
+        margin-top: 1.5vw;
 
-        padding: 1.5vw;
+        padding: 1.4vw;
 
         border-radius: 50px;
 
-        font-size: 2.3vw;
+        font-size: 2vw;
         line-height: 1;
 
-        box-shadow: 0 0.5vw 0 #032f50;
+        box-shadow: 0 0.4vw 0 #032f50;
     }
 }
+

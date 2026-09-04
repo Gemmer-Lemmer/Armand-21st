@@ -4,164 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arrie se 21st | Oktoberfest 🍻</title>
+    <title>Arrie's 21st Oktoberfest 🍻</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="invitation">
+<div class="page">
 
-        <!-- Hero -->
-        <section class="hero">
-            <p class="prost">🍺 PROST! 🍺</p>
+    <section class="hero">
 
-            <h1>ARRIE'S 21ST</h1>
-            <h2>OKTOBERFEST</h2>
+        <div class="wood-sign">
+            <p>ARRIE'S 21ST</p>
+            <h1>Oktoberfest</h1>
+            <span>GOOD BEER • GOOD FRIENDS • GOOD TIMES</span>
+        </div>
 
-            <div class="joke">
-                <p>Ja, ek weet... ek het al 21 geword die <strong>3de Januarie.</strong></p>
-                <p>Dit het my net 9 maande gevat om die partydjie te beplan.</p>
-                <p><strong>Better late than sober. 🍻</strong></p>
-            </div>
-        </section>
+    </section>
 
 
-        <!-- Party Details -->
-        <section class="details">
+    <section class="invitation-card">
 
-            <h2>THE FESTIVITIES</h2>
+        <h2>Jy is genooi!</h2>
 
-            <div class="details-grid">
+        <p class="intro">
+            Kom vier my 21ste saam my!
+        </p>
 
-                <div class="detail">
-                    <span>📅</span>
-                    <h3>DATUM</h3>
-                    <p>8 October 2026</p>
-                </div>
+        <p class="joke">
+            Ja, ek weet... ek het al die <strong>3de Januarie</strong> 21 geword.
+            Dit het my net 9 maande gevat om die partydjie te reel.
+            <br>
+            <strong>Better late than sober. 🍻</strong>
+        </p>
 
-                <div class="detail">
-                    <span>🕕</span>
-                    <h3>TYD</h3>
-                    <p>18:00</p>
-                </div>
 
-                <div class="detail">
-                    <span>📍</span>
-                    <h3>VENUE</h3>
-                    <p>Snowflake<br>Potchefstroom</p>
-                </div>
+        <div class="details">
 
-                <div class="detail">
-                    <span>🍺</span>
-                    <h3>THEMA</h3>
-                    <p>Oktoberfest</p>
-                </div>
-
-                <div class="detail">
-                    <span>👔</span>
-                    <h3>DRESS CODE</h3>
-                    <p>Oktoberfest</p>
-                </div>
-
+            <div>
+                <span class="icon">📅</span>
+                <strong>DATUM</strong>
+                <p>8 October 2026</p>
             </div>
 
-        </section>
+            <div>
+                <span class="icon">📍</span>
+                <strong>VENUE</strong>
+                <p>Snowflake<br>Potchefstroom</p>
+            </div>
+
+            <div>
+                <span class="icon">🕕</span>
+                <strong>TYD</strong>
+                <p>18:00</p>
+            </div>
+
+            <div>
+                <span class="icon">🍺</span>
+                <strong>DRESS CODE</strong>
+                <p>Oktoberfest</p>
+            </div>
+
+        </div>
+
+    </section>
 
 
-        <!-- Countdown -->
-        <section class="countdown-section">
+    <section class="countdown-card">
 
-            <h2>COUNTDOWN TO PROST 🍻</h2>
+        <h3>COUNTDOWN TO OKTOBERFEST</h3>
 
-            <div id="countdown">
+        <div id="countdown">
 
-                <div>
-                    <span id="days">00</span>
-                    <p>Days</p>
-                </div>
+            <div>
+                <span id="days">00</span>
+                <small>DAYS</small>
+            </div>
 
-                <div>
-                    <span id="hours">00</span>
-                    <p>Hours</p>
-                </div>
+            <div>
+                <span id="hours">00</span>
+                <small>HOURS</small>
+            </div>
 
-                <div>
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
+            <div>
+                <span id="minutes">00</span>
+                <small>MINUTES</small>
+            </div>
 
-                <div>
-                    <span id="seconds">00</span>
-                    <p>Seconds</p>
-                </div>
+            <div>
+                <span id="seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="rsvp-card">
+
+        <h2>RSVP</h2>
+
+        <p>Laat weet my of jy gaan bywoon!</p>
+
+        <form id="rsvpForm">
+
+            <label for="name">Naam</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Gaan jy bywoon?</label>
+
+            <div class="attendance-options">
+
+                <label class="attendance-option">
+                    <input
+                        type="radio"
+                        name="attending"
+                        value="yes"
+                        required
+                    >
+
+                    <span>
+                        🍻 Yes, eks daar!
+                    </span>
+                </label>
+
+
+                <label class="attendance-option">
+                    <input
+                        type="radio"
+                        name="attending"
+                        value="no"
+                    >
+
+                    <span>
+                        Jammer, ek kan dit nie maak nie.
+                    </span>
+                </label>
 
             </div>
 
-        </section>
+
+            <button type="submit">
+                RSVP 🍻
+            </button>
+
+        </form>
+
+    </section>
 
 
-        <!-- RSVP -->
-        <section class="rsvp">
+    <footer>
+        🌼 GOOD FRIENDS • GOOD BEER • GOOD TIMES 🌼
+    </footer>
 
-            <h2>BIST DU DABEI?</h2>
-
-            <p>Kom vier my laat verjaarsdag saam my!</p>
-
-            <form id="rsvpForm">
-
-                <label for="name">Naam</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+</div>
 
 
-                <label>Gaan jy kom?</label>
-
-                <div class="radio-options">
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="attending"
-                            value="yes"
-                            required
-                        >
-                        🍻 Eks daar!
-                    </label>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="attending"
-                            value="no"
-                        >
-                        😢 Ongelukkig nie
-                    </label>
-
-                </div>
-
-
-              
-
-
-                <button type="submit">
-                    RSVP 🍻
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

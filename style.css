@@ -2,164 +2,115 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
+    background: #1c160f;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    display: flex;
+    justify-content: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* THE WHOLE POSTER */
+
+.poster {
+    position: relative;
+
+    width: min(100vw, 900px);
+
+    aspect-ratio: 2 / 3;
+
+    background-image: url("oktoberfest-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
 
     color: #17324d;
-
-    background:
-        linear-gradient(
-            rgba(15, 25, 30, 0.1),
-            rgba(15, 25, 30, 0.1)
-        ),
-        url("oktoberfest-bg.png");
-
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
 }
 
 
-/* MAIN PAGE */
+/* =====================
+   TITLE
+===================== */
 
-.page {
-    width: min(900px, 94%);
-    margin: auto;
+.title-overlay {
+    position: absolute;
 
-    padding-top: 50px;
-    padding-bottom: 60px;
-}
+    top: 3.5%;
+    left: 15%;
+    width: 70%;
 
-
-/* WOODEN TITLE */
-
-.hero {
     text-align: center;
-    margin-bottom: 30px;
+
+    color: #f9ead0;
 }
 
-.wood-sign {
-    display: inline-block;
-
-    padding: 30px 55px;
-
-    background:
-        linear-gradient(
-            rgba(75, 39, 16, 0.92),
-            rgba(42, 21, 9, 0.95)
-        );
-
-    border: 5px solid #2c160a;
-    border-radius: 18px;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.55),
-        inset 0 0 20px rgba(255,255,255,0.08);
-
-    color: #f7ead1;
-}
-
-.wood-sign p {
+.title-overlay p {
     margin: 0;
 
-    font-size: 1.7rem;
+    font-size: clamp(14px, 2.4vw, 24px);
+
     font-weight: bold;
 }
 
-.wood-sign h1 {
-    margin: 5px 0;
+.title-overlay h1 {
+    margin: 0;
 
-    font-size: clamp(3.5rem, 9vw, 6rem);
+    font-size: clamp(38px, 8vw, 78px);
 
     color: #f6e8c7;
 
     text-shadow:
-        3px 3px 0 #0c4f88,
-        6px 6px 0 #062f52;
+        2px 2px #075494,
+        4px 4px #052f50;
 }
 
-.wood-sign span {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
+.title-overlay span {
+    font-size: clamp(8px, 1.4vw, 14px);
+
+    letter-spacing: 2px;
 }
 
 
-/* PARCHMENT */
+/* =====================
+   INVITATION PANEL
+===================== */
 
-.invitation-card,
-.rsvp-card {
-    position: relative;
+.invite-overlay {
+    position: absolute;
 
-    padding: 45px 45px;
-
-    margin-bottom: 30px;
-
-    background:
-        linear-gradient(
-            rgba(255, 249, 230, 0.96),
-            rgba(244, 226, 188, 0.96)
-        );
-
-    border: 4px solid #704219;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.4);
-}
-
-.invitation-card h2,
-.rsvp-card h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
+    top: 23%;
+    left: 16%;
+    width: 68%;
 
     text-align: center;
+}
+
+.invite-overlay h2 {
+    margin: 0 0 2%;
+
+    font-size: clamp(26px, 5vw, 48px);
 
     color: #075494;
-
-    font-size: clamp(2.6rem, 7vw, 4.5rem);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
 }
 
-.intro {
-    text-align: center;
+.invite-overlay > p {
+    margin: auto;
 
-    font-size: 1.3rem;
-    line-height: 1.5;
-}
+    width: 85%;
 
-.joke {
-    max-width: 650px;
+    font-size: clamp(8px, 1.5vw, 15px);
 
-    margin: 25px auto;
+    line-height: 1.4;
 
-    padding: 15px 20px;
-
-    text-align: center;
-
-    line-height: 1.5;
-
-    color: #5a351b;
-
-    border-top: 1px solid #b4823d;
-    border-bottom: 1px solid #b4823d;
+    color: #50351e;
 }
 
 
-/* EVENT DETAILS */
+/* DETAILS */
 
 .details {
     display: grid;
@@ -167,76 +118,40 @@ body {
     grid-template-columns:
         repeat(4, 1fr);
 
-    margin-top: 35px;
+    gap: 2%;
+
+    margin-top: 5%;
 }
 
-.details > div {
+.details div {
     text-align: center;
-
-    padding: 15px;
-
-    border-right:
-        1px solid #b88b53;
-}
-
-.details > div:last-child {
-    border-right: none;
-}
-
-.icon {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-size: 2rem;
 }
 
 .details strong {
     display: block;
 
-    margin-bottom: 7px;
+    font-size: clamp(7px, 1.3vw, 13px);
 
-    color: #6d421e;
+    color: #54331b;
 }
 
-.details p {
-    margin: 0;
+.details span {
+    display: block;
 
-    line-height: 1.4;
+    font-size: clamp(6px, 1vw, 11px);
 }
 
 
-/* COUNTDOWN */
+/* =====================
+   COUNTDOWN
+===================== */
 
-.countdown-card {
-    padding: 25px;
+.countdown-overlay {
+    position: absolute;
 
-    margin-bottom: 30px;
-
-    text-align: center;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            rgba(67, 34, 14, 0.95),
-            rgba(38, 18, 6, 0.95)
-        );
-
-    border: 5px solid #251106;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,0.4);
-}
-
-.countdown-card h3 {
-    margin-top: 0;
-
-    letter-spacing: 3px;
-
-    color: #f6e4bc;
+    top: 58%;
+    left: 22%;
+    width: 56%;
 }
 
 #countdown {
@@ -245,240 +160,149 @@ body {
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 3%;
 }
 
 #countdown div {
-    padding: 16px 8px;
+    text-align: center;
 
-    background:
-        linear-gradient(
-            #70421d,
-            #4a270f
-        );
-
-    border: 2px solid #301607;
-
-    border-radius: 8px;
+    color: white;
 }
 
 #countdown span {
     display: block;
 
-    font-size: 2.3rem;
-    font-weight: bold;
+    font-size: clamp(15px, 3vw, 30px);
 
-    color: white;
+    font-weight: bold;
 }
 
 #countdown small {
-    color: #f3ddaf;
+    font-size: clamp(5px, 0.8vw, 9px);
 
-    letter-spacing: 1px;
+    color: #f1dab0;
 }
 
 
-/* RSVP */
+/* =====================
+   RSVP
+===================== */
 
-.rsvp-card > p {
+.rsvp-overlay {
+    position: absolute;
+
+    top: 68.5%;
+    left: 22%;
+    width: 56%;
+
     text-align: center;
+}
 
-    font-size: 1.1rem;
+.rsvp-overlay h2 {
+    margin: 0 0 2%;
+
+    font-size: clamp(22px, 4vw, 40px);
+
+    color: #075494;
 }
 
 form {
-    max-width: 600px;
-
-    margin: 30px auto 0;
+    width: 100%;
 }
 
-form > label {
+form > label:first-of-type {
     display: block;
 
-    margin-top: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 1%;
+
+    text-align: left;
+
+    font-size: clamp(7px, 1.2vw, 12px);
 
     font-weight: bold;
+
+    color: #53341e;
 }
 
 input[type="text"] {
     width: 100%;
 
-    padding: 15px 16px;
+    padding: 2.5%;
 
-    border:
-        2px solid #a98b63;
+    border: 1px solid #a88b62;
+    border-radius: 6px;
 
-    border-radius: 9px;
+    background: rgba(255,255,255,0.86);
 
-    background:
-        rgba(255,255,255,0.85);
-
-    font-size: 1rem;
+    font-size: clamp(8px, 1.3vw, 13px);
 }
 
+.question {
+    margin: 3% 0 1%;
 
-/* YES / NO */
+    text-align: left;
 
-.attendance-options {
-    display: grid;
+    font-size: clamp(7px, 1.2vw, 12px);
 
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 15px;
-
-    margin-top: 12px;
+    font-weight: bold;
 }
 
-.attendance-option {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 18px;
-
-    border:
-        2px solid #bfa77f;
-
-    border-radius: 10px;
-
-    background:
-        rgba(255,255,255,0.7);
-
-    cursor: pointer;
-
-    transition: 0.2s ease;
-}
-
-.attendance-option:hover {
-    border-color: #075494;
-
-    transform:
-        translateY(-2px);
-}
-
-.attendance-option input {
-    width: 20px;
-    height: 20px;
-
-    accent-color: #075494;
-}
-
-
-/* BUTTON */
-
-button {
+.choice {
     display: block;
 
-    width: min(450px, 100%);
+    margin: 1.5% 0;
 
-    margin: 30px auto 0;
+    padding: 2%;
 
-    padding: 17px;
+    text-align: left;
+
+    background: rgba(255,255,255,0.72);
+
+    border: 1px solid #b69b70;
+    border-radius: 5px;
+
+    font-size: clamp(7px, 1.2vw, 12px);
+
+    cursor: pointer;
+}
+
+.choice input {
+    margin-right: 2%;
+}
+
+
+/* RSVP BUTTON */
+
+button {
+    width: 70%;
+
+    margin-top: 4%;
+
+    padding: 2.5%;
 
     border: none;
 
-    border-radius: 50px;
+    border-radius: 40px;
 
     background:
         linear-gradient(
-            #0871b7,
-            #064a82
+            #0873ba,
+            #06497d
         );
 
     color: white;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Georgia, serif;
 
-    font-size: 1.3rem;
+    font-size: clamp(9px, 1.5vw, 15px);
+
     font-weight: bold;
-
-    letter-spacing: 2px;
 
     cursor: pointer;
 
-    box-shadow:
-        0 6px 0 #033252,
-        0 10px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 0 #032f50;
 }
 
 button:hover {
-    transform:
-        translateY(-2px);
-}
-
-button:active {
-    transform:
-        translateY(3px);
-
-    box-shadow:
-        0 3px 0 #033252;
-}
-
-
-/* FOOTER */
-
-footer {
-    padding: 20px;
-
-    text-align: center;
-
-    color: #f9e7bf;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    background:
-        rgba(45, 22, 8, 0.92);
-
-    border-radius: 12px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .page {
-        padding-top: 20px;
-    }
-
-    .wood-sign {
-        width: 100%;
-        padding: 25px 15px;
-    }
-
-    .details {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .details > div {
-        border-right: none;
-
-        border-bottom:
-            1px solid #c3a16f;
-    }
-
-    .invitation-card,
-    .rsvp-card {
-        padding: 30px 20px;
-    }
-
-    #countdown {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .attendance-options {
-        grid-template-columns:
-            1fr;
-    }
+    transform: translateY(-1px);
 }

@@ -2,267 +2,196 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
 
 body {
-    margin: 0;
+    background: #1c160f;
 
-    font-family: Georgia, "Times New Roman", serif;
-
-    color: #17324d;
-
-    background:
-        linear-gradient(
-            rgba(10, 20, 20, 0.25),
-            rgba(10, 20, 20, 0.45)
-        ),
-        url("oktoberfest-bg.png");
-
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
-}
-
-
-/* =========================
-   MAIN CONTAINER
-========================= */
-
-.site-shell {
-    width: min(920px, 94%);
-
-    margin: 0 auto;
-
-    padding: 40px 0 60px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero-section {
     display: flex;
     justify-content: center;
 
-    padding: 20px 0 35px;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-.hero-copy {
-    width: min(720px, 100%);
 
-    padding: 30px 25px;
+/* =====================
+   THE WHOLE POSTER
+===================== */
+
+.poster {
+    position: relative;
+
+    width: min(100vw, 900px);
+
+    aspect-ratio: 2 / 3;
+
+    background-image: url("oktoberfest-bg.png");
+    background-size: 100% 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    color: #17324d;
+}
+
+
+/* =====================
+   TITLE
+===================== */
+
+.title-overlay {
+    position: absolute;
+
+    top: 3.5%;
+    left: 15%;
+    width: 70%;
 
     text-align: center;
 
-    color: #f8ead0;
-
-    background:
-        linear-gradient(
-            rgba(81, 43, 18, 0.96),
-            rgba(45, 22, 8, 0.98)
-        );
-
-    border: 5px solid #2b1508;
-    border-radius: 18px;
-
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.5),
-        inset 0 0 20px rgba(255, 255, 255, 0.06);
+    color: #f9ead0;
 }
 
-.eyebrow {
+.title-overlay p {
     margin: 0;
 
-    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    font-size: clamp(14px, 2.4vw, 24px);
 
     font-weight: bold;
+}
+
+.title-overlay h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 8vw, 78px);
+
+    line-height: 1;
+
+    color: #f6e8c7;
+
+    text-shadow:
+        2px 2px #075494,
+        4px 4px #052f50;
+}
+
+.title-overlay span {
+    font-size: clamp(8px, 1.4vw, 14px);
 
     letter-spacing: 2px;
 }
 
-.hero-copy h1 {
-    margin: 5px 0 10px;
 
-    font-size: clamp(3.7rem, 10vw, 6.5rem);
+/* =====================
+   INVITATION PANEL
+===================== */
 
-    line-height: 0.95;
+.invite-overlay {
+    position: absolute;
 
-    color: #f8e8c9;
-
-    text-shadow:
-        3px 3px 0 #075494,
-        6px 6px 0 #043152;
-}
-
-.hero-tagline {
-    margin: 0;
-
-    font-size: clamp(0.7rem, 2vw, 1rem);
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================
-   CONTENT
-========================= */
-
-.content-section {
-    display: grid;
-
-    gap: 28px;
-}
-
-
-/* =========================
-   PARCHMENT CARDS
-========================= */
-
-.parchment-card {
-    position: relative;
-
-    padding: 42px 42px;
-
-    background:
-        linear-gradient(
-            rgba(255, 249, 231, 0.97),
-            rgba(246, 229, 193, 0.97)
-        );
-
-    border: 4px solid #6a3b18;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 16px 38px rgba(0, 0, 0, 0.42),
-        inset 0 0 35px rgba(132, 83, 34, 0.12);
-}
-
-.parchment-card h2 {
-    margin: 0 0 12px;
+    top: 23%;
+    left: 16%;
+    width: 68%;
 
     text-align: center;
+}
 
-    font-size: clamp(2.6rem, 7vw, 4.5rem);
+.invite-overlay h2 {
+    margin: 0 0 2%;
+
+    font-size: clamp(26px, 5vw, 48px);
 
     line-height: 1;
 
     color: #075494;
 }
 
-.intro,
-.rsvp-intro {
-    margin: 0;
+.invite-overlay > p {
+    margin: auto;
 
-    text-align: center;
+    width: 85%;
 
-    font-size: 1.2rem;
+    font-size: clamp(8px, 1.5vw, 15px);
+
+    line-height: 1.4;
+
+    color: #50351e;
 }
 
-.joke {
-    max-width: 700px;
-
-    margin: 22px auto 0;
-
-    padding: 16px 18px;
-
-    text-align: center;
-
-    line-height: 1.5;
-
-    color: #5a351b;
-
-    border-top: 1px solid #b4823d;
-    border-bottom: 1px solid #b4823d;
+.invite-overlay .joke {
+    margin-top: 2%;
 }
 
 
-/* =========================
+/* =====================
    DETAILS
-========================= */
+===================== */
 
-.details-grid {
+.details {
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 10px;
+    gap: 2%;
 
-    margin-top: 34px;
+    margin-top: 5%;
 }
 
-.detail-item {
-    padding: 12px 8px;
-
+.details div {
     text-align: center;
 }
 
-.detail-icon {
+.details .icon {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 3%;
 
-    font-size: 2rem;
+    font-size: clamp(10px, 1.8vw, 18px);
 }
 
-.detail-item strong {
+.details strong {
     display: block;
 
-    margin-bottom: 6px;
+    font-size: clamp(7px, 1.3vw, 13px);
 
-    color: #674018;
-
-    font-size: 0.9rem;
-
-    letter-spacing: 0.5px;
+    color: #54331b;
 }
 
-.detail-item p {
-    margin: 0;
+.details p {
+    margin: 4px 0 0;
 
-    line-height: 1.35;
-}
+    font-size: clamp(7px, 1.2vw, 12px);
 
-
-/* =========================
-   WOOD CARD
-========================= */
-
-.wood-card {
-    padding: 26px 24px;
-
-    color: #fff;
-
-    background:
-        linear-gradient(
-            rgba(77, 40, 15, 0.97),
-            rgba(40, 20, 7, 0.98)
-        );
-
-    border: 5px solid #281205;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 14px 32px rgba(0, 0, 0, 0.45);
+    line-height: 1.2;
 }
 
 
-/* =========================
+/* =====================
    COUNTDOWN
-========================= */
+===================== */
 
-.countdown-card h3 {
-    margin: 0 0 20px;
+.countdown-overlay {
+    position: absolute;
+
+    top: 58%;
+    left: 20%;
+    width: 60%;
 
     text-align: center;
+}
 
-    color: #f4dfb5;
+.countdown-overlay h3 {
+    margin: 0 0 3%;
 
-    letter-spacing: 3px;
+    font-size: clamp(8px, 1.5vw, 15px);
+
+    color: #f1dab0;
+
+    letter-spacing: 1px;
 }
 
 #countdown {
@@ -270,60 +199,72 @@ body {
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 14px;
+    gap: 3%;
 }
 
 #countdown div {
-    padding: 16px 8px;
-
     text-align: center;
 
-    background:
-        linear-gradient(
-            #74431c,
-            #48250e
-        );
-
-    border: 2px solid #2e1507;
-
-    border-radius: 8px;
+    color: white;
 }
 
 #countdown span {
     display: block;
 
-    font-size: 2.3rem;
+    font-size: clamp(15px, 3vw, 30px);
 
     font-weight: bold;
 }
 
 #countdown small {
-    display: block;
+    font-size: clamp(5px, 0.8vw, 9px);
 
-    margin-top: 5px;
-
-    color: #f3ddaf;
-
-    font-size: 0.7rem;
-
-    letter-spacing: 1px;
+    color: #f1dab0;
 }
 
 
-/* =========================
-   RSVP FORM
-========================= */
+/* =====================
+   RSVP
+===================== */
+
+.rsvp-overlay {
+    position: absolute;
+
+    top: 68%;
+    left: 18%;
+    width: 64%;
+
+    text-align: center;
+}
+
+.rsvp-overlay h2 {
+    margin: 0;
+
+    font-size: clamp(22px, 4vw, 40px);
+
+    line-height: 1;
+
+    color: #075494;
+}
+
+.rsvp-overlay > p {
+    margin: 2% 0 4%;
+
+    font-size: clamp(7px, 1.2vw, 12px);
+}
 
 form {
-    max-width: 640px;
-
-    margin: 28px auto 0;
+    width: 100%;
 }
 
-form > label {
+form > label:first-of-type {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 1%;
+
+    text-align: left;
+
+    font-size: clamp(7px, 1.2vw, 12px);
 
     font-weight: bold;
 
@@ -333,245 +274,439 @@ form > label {
 input[type="text"] {
     width: 100%;
 
-    padding: 15px 16px;
+    padding: 2.5%;
 
-    border: 2px solid #ad8c61;
-    border-radius: 9px;
+    border: 1px solid #a88b62;
+    border-radius: 6px;
 
-    background: rgba(255, 255, 255, 0.88);
-
-    font-size: 1rem;
-}
-
-.question {
-    margin: 22px 0 9px;
-
-    font-weight: bold;
-
-    color: #53341e;
-}
-
-.attendance-options {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 14px;
-}
-
-.attendance-option {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    min-height: 68px;
-
-    padding: 14px 16px;
-
-    border: 2px solid #bfa77f;
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.72);
-
-    cursor: pointer;
-
-    transition:
-        transform 0.15s ease,
-        border-color 0.15s ease;
-}
-
-.attendance-option:hover {
-    transform: translateY(-2px);
-
-    border-color: #075494;
-}
-
-.attendance-option input {
-    width: 20px;
-    height: 20px;
-
-    accent-color: #075494;
-}
-
-button {
-    display: block;
-
-    width: min(440px, 100%);
-
-    margin: 30px auto 0;
-
-    padding: 16px;
-
-    border: none;
-    border-radius: 999px;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            #0873b8,
-            #064a82
-        );
+    background: rgba(255, 255, 255, 0.86);
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 1.2rem;
+    font-size: clamp(8px, 1.3vw, 13px);
+}
+
+.question {
+    margin: 3% 0 1%;
+
+    text-align: left;
+
+    font-size: clamp(7px, 1.2vw, 12px);
 
     font-weight: bold;
+}
 
-    letter-spacing: 2px;
+.choice {
+    display: block;
+
+    margin: 1.5% 0;
+
+    padding: 2%;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid #b69b70;
+    border-radius: 5px;
+
+    font-size: clamp(7px, 1.2vw, 12px);
+
+    cursor: pointer;
+}
+
+.choice input {
+    margin-right: 2%;
+}
+
+
+/* =====================
+   RSVP BUTTON
+===================== */
+
+button {
+    width: 70%;
+
+    margin-top: 4%;
+
+    padding: 2.5%;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: linear-gradient(
+        #0873ba,
+        #06497d
+    );
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(9px, 1.5vw, 15px);
+
+    font-weight: bold;
 
     cursor: pointer;
 
-    box-shadow:
-        0 6px 0 #033252,
-        0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 0 #032f50;
 }
 
 button:hover {
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: translateY(3px);
-
-    box-shadow:
-        0 3px 0 #033252;
+    transform: translateY(-1px);
 }
 
 
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    margin-top: 28px;
-
-    padding: 20px;
-
-    text-align: center;
-
-    color: #f6e4bc;
-
-    background: rgba(45, 22, 8, 0.94);
-
-    border-radius: 12px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
+/* =====================================================
+   PHONE
+===================================================== */
 
 @media (max-width: 700px) {
 
+    html,
     body {
-        background-attachment: scroll;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: #1c160f;
     }
 
-    .site-shell {
-        width: 94%;
-
-        padding-top: 18px;
-        padding-bottom: 30px;
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
 
-    .hero-section {
-        padding-bottom: 20px;
+    .poster {
+        position: relative;
+
+        width: 100vw;
+        max-width: 100vw;
+
+        height: 150vw;
+        min-height: 150vw;
+
+        aspect-ratio: auto;
+
+        background-image: url("oktoberfest-bg.png");
+        background-size: 100% 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        overflow: hidden;
     }
 
-    .hero-copy {
-        padding: 24px 12px;
+
+    /* =====================
+       TOP WOODEN SIGN
+    ===================== */
+
+    .title-overlay {
+        top: 5.4%;
+        left: 20%;
+        width: 60%;
     }
 
-    .hero-copy h1 {
-        font-size: clamp(3rem, 15vw, 4.5rem);
+    .title-overlay p {
+        margin: 0;
+
+        font-size: 2.8vw;
+        line-height: 1;
+
+        font-weight: bold;
     }
 
-    .hero-tagline {
-        letter-spacing: 1px;
+    .title-overlay h1 {
+        margin: 1vw 0 0;
+
+        font-size: 8.4vw;
+        line-height: 0.95;
     }
 
-    .parchment-card {
-        padding: 28px 18px;
+    .title-overlay span {
+        display: block;
+
+        margin-top: 1.3vw;
+
+        font-size: 1.35vw;
+        line-height: 1;
+
+        letter-spacing: 0.25vw;
+
+        white-space: nowrap;
     }
 
-    .parchment-card h2 {
-        font-size: 2.8rem;
+
+    /* =====================
+       INVITATION
+    ===================== */
+
+    .invite-overlay {
+        top: 27.7%;
+        left: 18%;
+        width: 64%;
     }
 
-    .intro,
-    .rsvp-intro {
-        font-size: 1rem;
+    .invite-overlay h2 {
+        margin: 0 0 1.3vw;
+
+        font-size: 5.5vw;
+        line-height: 1;
+
+        color: #075494;
     }
 
-    .joke {
-        padding: 14px 8px;
+    .invite-overlay .intro {
+        width: 100%;
 
-        font-size: 0.9rem;
+        margin: 0;
+
+        font-size: 1.9vw;
+        line-height: 1.15;
     }
 
-    .details-grid {
-        grid-template-columns: 1fr 1fr;
+    .invite-overlay .joke {
+        width: 100%;
 
-        gap: 16px 8px;
+        margin: 1vw 0 0;
 
-        margin-top: 26px;
+        font-size: 1.65vw;
+        line-height: 1.2;
     }
 
-    .detail-item {
-        padding: 8px 4px;
+
+    /* =====================
+       DETAILS
+    ===================== */
+
+    .details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 0;
+
+        width: 100%;
+
+        margin-top: 4.8vw;
     }
 
-    .countdown-card {
-        padding: 22px 14px;
+    .details div {
+        min-width: 0;
+
+        padding: 0 0.4vw;
+
+        text-align: center;
     }
 
-    .countdown-card h3 {
-        font-size: 0.9rem;
+    .details .icon {
+        display: block;
 
-        letter-spacing: 1px;
+        margin: 0 0 0.7vw;
+
+        font-size: 2.5vw;
+        line-height: 1;
+    }
+
+    .details strong {
+        display: block;
+
+        font-size: 1.65vw;
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+    .details p {
+        margin: 0.8vw 0 0;
+
+        font-size: 1.65vw;
+        line-height: 1.15;
+    }
+
+
+    /* =====================
+       COUNTDOWN
+    ===================== */
+
+    .countdown-overlay {
+        top: 59.6%;
+        left: 18%;
+        width: 64%;
+
+        text-align: center;
+    }
+
+    .countdown-overlay h3 {
+        margin: 0 0 1vw;
+
+        font-size: 2vw;
+        line-height: 1;
+
+        letter-spacing: 0.15vw;
+
+        color: #f3e0bb;
+
+        white-space: nowrap;
     }
 
     #countdown {
-        gap: 7px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 1vw;
     }
 
     #countdown div {
-        padding: 12px 4px;
+        text-align: center;
     }
 
     #countdown span {
-        font-size: 1.6rem;
+        display: block;
+
+        font-size: 3.8vw;
+        line-height: 1;
+
+        font-weight: bold;
+
+        color: white;
     }
 
     #countdown small {
-        font-size: 0.55rem;
+        display: block;
+
+        margin-top: 0.5vw;
+
+        font-size: 1vw;
+        line-height: 1;
+
+        color: #f1dab0;
     }
 
-    .attendance-options {
-        grid-template-columns: 1fr;
+
+    /* =====================
+       RSVP
+    ===================== */
+
+    .rsvp-overlay {
+        top: 68.5%;
+        left: 18%;
+        width: 64%;
+
+        text-align: center;
     }
 
-    .attendance-option {
-        min-height: 58px;
+    .rsvp-overlay h2 {
+        margin: 0;
+
+        font-size: 5.4vw;
+        line-height: 1;
+
+        color: #075494;
     }
+
+    .rsvp-overlay > p {
+        margin: 1vw 0 1.8vw;
+
+        font-size: 1.8vw;
+        line-height: 1.1;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form > label:first-of-type {
+        display: block;
+
+        margin: 0 0 0.6vw;
+
+        text-align: left;
+
+        font-size: 1.6vw;
+        line-height: 1;
+
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        display: block;
+
+        width: 100%;
+        height: 5.6vw;
+
+        padding: 1vw 1.4vw;
+
+        border: 1px solid #a88b62;
+        border-radius: 1vw;
+
+        font-size: 1.8vw;
+    }
+
+
+    /* QUESTION */
+
+    .question {
+        margin: 1.5vw 0 0.7vw;
+
+        text-align: left;
+
+        font-size: 1.65vw;
+        line-height: 1;
+
+        font-weight: bold;
+    }
+
+
+    /* RADIO OPTIONS */
+
+    .choice {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+
+        margin: 0.6vw 0;
+
+        padding: 1.1vw 1.4vw;
+
+        text-align: left;
+
+        background: rgba(255, 255, 255, 0.72);
+
+        border: 1px solid #b69b70;
+        border-radius: 1vw;
+
+        font-size: 1.65vw;
+        line-height: 1.1;
+    }
+
+    .choice input {
+        flex-shrink: 0;
+
+        width: 2.7vw;
+        height: 2.7vw;
+
+        margin: 0 1vw 0 0;
+    }
+
+
+    /* =====================
+       RSVP BUTTON
+    ===================== */
 
     button {
-        margin-top: 24px;
+        width: 66%;
 
-        font-size: 1rem;
-    }
+        margin-top: 1.5vw;
 
-    footer {
-        font-size: 0.8rem;
+        padding: 1.4vw;
 
-        letter-spacing: 1px;
+        border-radius: 50px;
+
+        font-size: 2vw;
+        line-height: 1;
+
+        box-shadow: 0 0.4vw 0 #032f50;
     }
 }
